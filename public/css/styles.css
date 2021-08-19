@@ -8,3 +8,20 @@
 body {
   background-color: seagreen;
 }
+
+.form-container {
+  background-color: white;
+  width: 25vw;
+}
+
+.form-container input,
+.form-container label {
+  display: block;
+}
+
+.form-container select {
+}
+
+button {
+  display: block;
+}

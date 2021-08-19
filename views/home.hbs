@@ -1,1 +1,33 @@
 <h1>home</h1>
+<div class='form-container'>
+  <h2>What's on the menu?</h2>
+  <form action='' method='post'>
+    <label for='ingredients'>From the pantry...</label>
+    <input
+      type='text'
+      id='ingredients'
+      name='ingredients'
+      placeholder='Add Ingredient...'
+    />
+    <select name='ingredient' id='ingredients'>
+      <option value='breakfast'>breakfast</option>
+      <option value='lunch'>lunch</option>
+      <option value='dinner'>dinner</option>
+      <option value='snack'>snack</option>
+    </select>
+    <label for='serving'>The amount...</label>
+    <input
+      type='text'
+      id='serving'
+      name='serving'
+      placeholder='Add Serving Size...'
+    />
+    <select name='unit-type'>
+      <option name='cup' value='cup'>Cup</option>
+      <option name='tea-spoon' value='tea-spoon'>tea spoon</option>
+      <option name='once' value='ounce'>ounce</option>
+      <option name='gram' value='gram'>gram</option>
+    </select>
+    <button name='add-entry'>Yum!</button>
+  </form>
+</div>
