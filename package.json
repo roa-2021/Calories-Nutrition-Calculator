@@ -4,6 +4,7 @@
   "description": "It's a calories and nutrition calculator",
   "main": "index.js",
   "scripts": {
+    "dev":"nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/roa-2021/Calories-Nutrition-Calculator#readme",
   "dependencies": {
     "knex": "^0.21.21",
+    "nodemon": "^2.0.12",
     "sqlite3": "^5.0.2"
   }
 }
