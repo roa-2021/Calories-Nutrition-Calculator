@@ -4,8 +4,11 @@
   "description": "It's a calories and nutrition calculator",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index",
+    "dev": "nodemon index",
+    "lint": "eslint .",
+    "knex": "knex",
+    "test": "jest --verbose --watchAll"
   },
   "repository": {
     "type": "git",
@@ -18,6 +21,10 @@
   },
   "homepage": "https://github.com/roa-2021/Calories-Nutrition-Calculator#readme",
   "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "handlebars": "^4.7.7",
+    "hbs": "^4.1.2",
     "knex": "^0.21.21",
     "nodemon": "^2.0.12",
     "sqlite3": "^5.0.2"
