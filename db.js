@@ -12,5 +12,10 @@ const getUnits = (db = connection) =>{
 }
 
 const getIngredientsNutritions = () =>{
-  return db('')
+
+}
+
+module.exports = {
+  getUsers:getUsers,
+  getUnits:getUnits,
 }
