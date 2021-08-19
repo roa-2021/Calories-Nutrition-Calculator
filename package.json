@@ -1,0 +1,23 @@
+{
+  "name": "calories-nutrition-calculator",
+  "version": "1.0.0",
+  "description": "It's a calories and nutrition calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roa-2021/Calories-Nutrition-Calculator.git"
+  },
+  "author": "Max, Casey, Kang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/roa-2021/Calories-Nutrition-Calculator/issues"
+  },
+  "homepage": "https://github.com/roa-2021/Calories-Nutrition-Calculator#readme",
+  "dependencies": {
+    "knex": "^0.21.21",
+    "sqlite3": "^5.0.2"
+  }
+}
