@@ -9,23 +9,32 @@ router.get('/', (req, res) => {
   // })
 })
 
-let nutritionArr = []
-
-router.get('/output', (req, res) => {
-  return db.getIngredientID(req.body.ingredients)
-  .then(ingreID=> {
-    db.getIngredientsNutritions(ingreID)
-      .then(nutrition=>{ 
-        nutritionArr.push(nutrition)  
-  })
-  res.redirect('/')
-})
+// router.get('/output', (req, res) => {
+//   return db.getIngredientID(req.body.ingredients)
+//   .then(ingreID=> {
+//     db.getIngredientsNutritions(ingreID)
+//       .then(nutrition=>{ 
+//         nutritionArr.push(nutrition)  
+//   })
+//   res.redirect('/')
+// })
+// })
 
 router.post('/', (req, res) => {
-  console.log nutritionArr
-}
+  return db.getIngredientID(req.body.ingredients)
+  .then(ingreID=>{
+  db.getIngredientsNutritions(ingreID)
+  .then(results => {
+    let nutritionArr = results.shift()
+    // nutritionArr.push(req.body)
+    // console.log(nutritionArr)
+    res.render('output', {nutritionArr})
+  })
+})
+})
 
-  // res.render('output')
+router.get('/output', (req, res) => {
+  res.render('output')
   // .catch((err) => {
   //   res.status(500).send('DATABASE ERROR: ' + err.message)
   // })
