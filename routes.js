@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
   //   res.status(500).send('DATABASE ERROR: ' + err.message)
   // })
 })
-
 // router.get('/output', (req, res) => {
 //   return db.getIngredientID(req.body.ingredients)
 //   .then(ingreID=> {
@@ -28,9 +27,13 @@ router.post('/', (req, res) => {
       //add meal type and unit to the data (scuff fix, not from DB)
       nutritionArr.serving = req.body.serving
       nutritionArr.meal = req.body.ingredient
+      
+      caculation(nutritionArr)
+
       // nutritionArr.unit = req.body.unit_type
       // console.log(req.body)
       // console.log(nutritionArr)
+
 
       res.render('output', { nutritionArr })
     })
@@ -43,5 +46,18 @@ router.get('/output', (req, res) => {
   //   res.status(500).send('DATABASE ERROR: ' + err.message)
   // })
 })
+
+const caculation= (nutritions) =>{
+  var serve = nutritions.serving
+  var calories = nutritions.calories*serve;
+  var fats = nutritions.fats*serve;
+  var protein = nutritions.protein*serve;
+  var carbs = nutritions.carbs*serve;
+  nutritions.calories = calories;
+  nutritions.carbs = carbs;
+  nutritions.fats = fats;
+  nutritions.protein = protein;
+  return nutritions;
+}
 
 module.exports = router
