@@ -1,16 +1,20 @@
 {{! <h1>output</h1> }}
 {{!-- <p>{{nutritionArr.protein}}</p> --}}
 
-<h4>The nutritional value of
-  {{nutritionArr.serving}}
-  grams of
-  {{nutritionArr.ingredients_name}}
-  is:</h4>
-<ul>
-  <li>Calories: {{nutritionArr.calories}}</li>
-  <li>Protein: {{nutritionArr.protein}}</li>
-  <li>Fats: {{nutritionArr.fats}}</li>
-  <li>Carbs: {{nutritionArr.carbs}}</li>
-</ul>
+<div class='nutri-container'>
+  {{! <img class='cake' src='images/cake.png' alt='#' /> }}
+  <h4>The nutritional value of
+    {{nutritionArr.serving}}
+    grams of
+    {{nutritionArr.ingredients_name}}
+    !</h4>
+  <ul>
+    <li class='nutri-box'>Calories: {{nutritionArr.calories}}</li>
+    <li class='nutri-box'>Protein: {{nutritionArr.protein}}</li>
+    <li class='nutri-box'>Fats: {{nutritionArr.fats}}</li>
+    <li class='nutri-box'>Carbs: {{nutritionArr.carbs}}</li>
+  </ul>
 
-<p>Enjoy your {{nutritionArr.meal}}!!</p>
+  {{!-- <p class='enjoy'>Yay {{nutritionArr.meal}}!!</p> --}}
+
+</div>

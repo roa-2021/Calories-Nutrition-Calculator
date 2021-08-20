@@ -90,7 +90,7 @@ header nav {
 
 .form-container {
   background-color: white;
-  width: 24vw;
+  width: 26vw;
   margin-left: 40px;
   margin-top: 40px;
   border-radius: 16px;
@@ -110,7 +110,8 @@ header nav {
   margin-left: 60px;
 }
 
-.form-container label {
+.form-container label,
+.nutri-label {
   color: black;
   display: block;
   clear: left;
@@ -119,7 +120,8 @@ header nav {
   margin-top: 20px;
 }
 
-.form-container input {
+.form-container input,
+.nutri-box {
   display: block;
   float: left;
   border: none;
@@ -136,7 +138,6 @@ header nav {
 .form-container select {
   float: left;
   border: none;
-  background-color: yellow;
   height: 40px;
   background-color: #eee;
   margin-top: 10px;
@@ -165,3 +166,47 @@ header nav {
   text-align: center;
   float: left;
 } */
+
+.nutri-container {
+  width: 66vw;
+  margin: 0 auto;
+}
+
+.nutri-container h4 {
+  line-height: 10vh;
+  margin-left: 2.5vw;
+  font-size: 72px;
+  color: white;
+  text-align: center;
+}
+
+.nutri-box {
+  margin-top: 80px;
+  text-indent: 0px;
+  text-align: center;
+  line-height: 40px;
+  background-color: #f6ee7c;
+  color: #6913ff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.cake {
+  display: block;
+  clear: both;
+  margin-left: 400px;
+}
+.enjoy {
+  clear: both;
+  float: none;
+  text-align: center;
+
+  height: 60px;
+  width: 200px;
+  line-height: 60px;
+
+  font-weight: bold;
+  border-radius: 16px;
+  margin: 0 auto;
+  margin-top: 80px !important;
+}
