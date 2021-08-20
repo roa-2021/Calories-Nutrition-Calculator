@@ -18,17 +18,26 @@ const getMealType = (db = connection) => {
   return db('meal').select()
 }
 
+const getIngredientID = (IngreName,db = connection) =>{
+  return db('ingredients')
+  .where('ingredients.ingredients_name',IngreName)
+  .select('id')
+}
+
+
 //getting the nutritions of every ingridients
 const getIngredientsNutritions = (ingreID,db = connection) =>{
-  return db('ingredients')
-  .join('nutrition','nutrition.ingredients_id','nutrition.id')
-  .where('ingredients.id',ingreID)
+  console.log(ingreID)
+  return db('nutrition')
+  // .join('nutrition','nutrition.ingredients_id','nutrition.id')
+  .where('ingredients_id',ingreID[0].id)
   .select()
 }
 
 module.exports = {
   getUsers:getUsers,
   getUnits:getUnits,
+  getIngredientID: getIngredientID,
   getIngredientsNutritions:getIngredientsNutritions,
   getMealType:getMealType,
 }
