@@ -5,7 +5,8 @@ exports.seed = function(knex) {
   //   .then(function () {
       // Inserts seed entries
       return knex('unit').insert([
-        {id: 3001, unit_type: 'gram', abbreviation: 'g'}
+        {id: 3001, unit_type: 'gram', abbreviation: 'g'},
+        {id: 3002, unit_type: 'cup', abbreviation: 'cup'}
       ]);
     // });
 };

@@ -28,6 +28,9 @@ router.post('/', (req, res) => {
       //add meal type and unit to the data (scuff fix, not from DB)
       nutritionArr.serving = req.body.serving
       nutritionArr.meal = req.body.ingredient
+      // nutritionArr.unit = req.body.unit_type
+      // console.log(req.body)
+      // console.log(nutritionArr)
 
       res.render('output', { nutritionArr })
     })
